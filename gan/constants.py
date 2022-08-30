@@ -2,7 +2,7 @@
 dataroot = "pokemons"
 
 # Number of workers for dataloader
-workers = 2
+workers = 8
 
 # Batch size during training
 batch_size = 128
@@ -24,7 +24,7 @@ ngf = 64
 ndf = 64
 
 # Number of training epochs
-num_epochs = 100
+num_epochs = 1000
 
 # Learning rate for optimizers
 lr = 0.0002
