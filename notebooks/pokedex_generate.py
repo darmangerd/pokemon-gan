@@ -16,9 +16,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
-from .gan.constants import *
-from .gan.discriminator import Discriminator
-from .gan.generator import Generator
+from .tools.constants import *
+from .tools.discriminator import Discriminator
+from .tools.generator import Generator
 
 
 def generate_pokedex():
@@ -26,7 +26,7 @@ def generate_pokedex():
     # Decide which device we want to run on
     device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
 
-    # Create the generator
+    # Create the generator_pokedex.h5
     netG = Generator(ngpu).to(device)
 
     # Handle multi-gpu if desired
@@ -35,7 +35,7 @@ def generate_pokedex():
 
     # Apply the weights_init function to randomly initialize all weights
     #  to mean=0, stdev=0.02.
-    netG.load_state_dict(torch.load('generator', map_location=torch.device('cpu')))
+    netG.load_state_dict(torch.load('generator_pokedex.h5', map_location=torch.device('cpu')))
     netG.eval()
 
     # Set random seed for reproducibility

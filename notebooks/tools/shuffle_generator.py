@@ -43,7 +43,7 @@ class Generator_128(nn.Module):
 
 
 trained_gen = Generator_128(0)
-trained_gen.load_state_dict(torch.load("generator_epoch_1300v1-5.h5",map_location=torch.device('cpu')))
+trained_gen.load_state_dict(torch.load("generator_shuffle.h5",map_location=torch.device('cpu')))
 
 
 def predict(pokemon_count):
