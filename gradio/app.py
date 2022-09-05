@@ -48,8 +48,8 @@ trained_gen.load_state_dict(torch.load("generator_epoch_1300v1-5.h5",map_locatio
 def predict(seed, pokemon_count):
     torch.manual_seed(seed)
     z = torch.randn(pokemon_count, LATENT_VECTOR_DIM, 1, 1)
-    punks = trained_gen(z)
-    save_image(punks, "pokemon.png", normalize=True)
+    pokemon = trained_gen(z)
+    save_image(pokemon, "pokemon.png", normalize=True)
     return 'pokemon.png'
 
 gr.Interface(
