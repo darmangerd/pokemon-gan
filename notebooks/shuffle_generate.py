@@ -41,21 +41,21 @@ class Generator_128(nn.Module):
         return self.main(input)
 
 
-
 trained_gen = Generator_128(0)
 trained_gen.load_state_dict(torch.load("generator_epoch_1300v1-5.h5",map_location=torch.device('cpu')))
 
 
-def predict(pokemon_count):
+def generate_shuffle(pokemon_count):
     z = torch.randn(pokemon_count, LATENT_VECTOR_DIM, 1, 1)
     pokemon = trained_gen(z)
     save_image(pokemon, "pokemon.png", normalize=True)
+    image = plt.imread("pokemon.png")
+    fig = plt.figure()
+    plt.imshow(image)
+    plt.axis('off')
+    fig.set_facecolor('black')
+    return plt
 
-predict(pokemon_count=8)
-image = plt.imread("pokemon.png")
-plt.figure()
-plt.imshow(image) 
-plt.show()
 
 
 
