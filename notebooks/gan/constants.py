@@ -9,7 +9,7 @@ batch_size = 128
 
 # Spatial size of training images. All images will be resized to this
 #   size using a transformer.
-image_size = 128
+image_size = 64
 
 # Number of channels in the training images. For color images this is 3
 nc = 3
@@ -18,10 +18,10 @@ nc = 3
 nz = 100
 
 # Size of feature maps in generator
-ngf = 128
+ngf = 64
 
 # Size of feature maps in discriminator
-ndf = 128
+ndf = 64
 
 # Number of training epochs
 num_epochs = 10
