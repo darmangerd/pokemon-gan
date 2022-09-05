@@ -9,7 +9,6 @@ from notebooks.pokedex_generate import generate_pokedex
 from notebooks.shuffle_generate import generate_shuffle
 
 
-
 st.markdown("# Welcome to our Pokemon generator using GAN")
 
 st.markdown("## General")
@@ -20,4 +19,8 @@ st.markdown("## Pokedex model")
 st.pyplot(generate_pokedex())
 
 st.markdown("## Shuffle model")
-st.pyplot(generate_shuffle(6))
+values = st.slider(
+     'select the number of pokemon you want to generate',
+     1, 30)
+st.write('Values:', values)
+st.pyplot(generate_shuffle(values))
