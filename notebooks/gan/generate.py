@@ -8,6 +8,7 @@ import torchvision.transforms as T
 from torch.utils.data import DataLoader, ConcatDataset
 import torchvision.utils as vutils
 import random
+import matplotlib.pyplot as plt
 
 LATENT_VECTOR_DIM = 8 # latent vector dimension
 
@@ -45,21 +46,17 @@ trained_gen = Generator_128(0)
 trained_gen.load_state_dict(torch.load("generator_epoch_1300v1-5.h5",map_location=torch.device('cpu')))
 
 
-def predict(seed, pokemon_count):
-    torch.manual_seed(seed)
+def predict(pokemon_count):
     z = torch.randn(pokemon_count, LATENT_VECTOR_DIM, 1, 1)
-    punks = trained_gen(z)
-    save_image(punks, "pokemon.png", normalize=True)
-    return 'pokemon.png'
+    pokemon = trained_gen(z)
+    save_image(pokemon, "pokemon.png", normalize=True)
 
-gr.Interface(
-    predict,
-    inputs=[
-        gr.Slider(0, 1000, label='Seed', default=42),
-        gr.Slider(1, 8, label='Number of pokemon', step=1, default=10),
-    ],
-    outputs="image",
-).launch(share=True)
+predict(pokemon_count=8)
+image = plt.imread("pokemon.png")
+plt.figure()
+plt.imshow(image) 
+plt.show()
+
 
 
 
