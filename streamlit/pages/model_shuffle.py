@@ -1,8 +1,7 @@
 import streamlit as st
 
-st.markdown("# First model")
-st.sidebar.markdown("# First model")
-
+st.markdown("# Model Shuffle")
+st.sidebar.markdown("# Model Shuffle")
 
 # Waiting
 import time
