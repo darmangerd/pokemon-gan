@@ -32,3 +32,10 @@ Il y a 2 modèles différents.
 - https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html 
 - https://www.tensorflow.org/tutorials/generative/dcgan
 - https://www.youtube.com/watch?v=JB8T_zN7ZC0&t=2627s
+- https://towardsdatascience.com/deep-convolutional-gan-how-to-use-a-dcgan-to-generate-images-in-python-b08afd4d124e
+- https://github.com/soumith/ganhacks
+- https://medium.com/@kums220/using-generative-adversarial-networks-to-create-dog-images-7dece0572e23
+- https://towardsdatascience.com/dcgans-generating-dog-images-with-tensorflow-and-keras-fb51a1071432
+- https://blog.jovian.ai/pokegan-generating-fake-pokemon-with-a-generative-adversarial-network-f540db81548d
+- https://machinelearningmastery.com/how-to-implement-the-frechet-inception-distance-fid-from-scratch/
+- https://machinelearningmastery.com/how-to-train-stable-generative-adversarial-networks/
