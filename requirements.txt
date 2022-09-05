@@ -6,3 +6,4 @@ jupyter
 matplotlib
 streamlit
 pillow
+pandas
