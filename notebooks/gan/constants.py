@@ -1,5 +1,5 @@
 # Root directory for dataset
-dataroot = "pokemons"
+dataroot = "../pokemons"
 
 # Number of workers for dataloader
 workers = 8
