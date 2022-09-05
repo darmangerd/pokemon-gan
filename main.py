@@ -18,6 +18,8 @@ st.markdown("## General")
 st.markdown("- You can find the code on our [repo](https://gitlab-etu.ing.he-arc.ch/isc/2022-23/niveau-3/3281-projet-p3-hes-ete-id/pokemon)")
 st.markdown("- You can find the documentation on [GitLab](https://gitlab-etu.ing.he-arc.ch/isc/2022-23/niveau-3/3281-projet-p3-hes-ete-id/pokemon/-/wikis/home)")
 
+st.markdown("- Shuffle model also available on [Gradio](https://huggingface.co/spaces/clemsou/pokemon_generator)")
+
 st.markdown("## Pokedex model")
 st.pyplot(generate_pokedex())
 
