@@ -27,3 +27,8 @@ Il y a 2 modèles différents.
 + Les différentes Classes utilitaires des modèles se trouvent dans : `/notebooks/tools`
 + Les différents images générées, logs et logos utilisés se trouvent dans : `/notebooks/ressources`
 + Les fichiers nécessaires pour le déploiement gradio se trouvent dans `/gradio`
+
+# Références
+- https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html 
+- https://www.tensorflow.org/tutorials/generative/dcgan
+- https://www.youtube.com/watch?v=JB8T_zN7ZC0&t=2627s
