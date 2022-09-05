@@ -7,9 +7,12 @@ Group 4: David Darmanger, Owen Gombas, Clément Brigliano
 import streamlit as st
 from notebooks.pokedex_generate import generate_pokedex
 from notebooks.shuffle_generate import generate_shuffle
+from PIL import Image
 
+image = Image.open('notebooks/ressources/logos/title.png')
+st.image(image)
 
-st.markdown("# Welcome to our Pokemon generator using GAN")
+st.markdown("# Welcome to our Pokemons generator using GANs")
 
 st.markdown("## General")
 st.markdown("- You can find the code on our [repo](https://gitlab-etu.ing.he-arc.ch/isc/2022-23/niveau-3/3281-projet-p3-hes-ete-id/pokemon)")
